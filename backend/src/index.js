@@ -23,7 +23,7 @@ app.use('/api/workout', workoutRoutes);
 app.use('/api/weight', weightRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-app.get('/api/health', (res) => res.json({ status: 'OK' }));
+app.get('/api/health', (req, res) => res.json({ status: 'OK' }));
 
 
 app.use((err, req, res, next) => {
