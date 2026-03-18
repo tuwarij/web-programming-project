@@ -25,7 +25,8 @@ app.use('/api/dashboard', dashboardRoutes);
 
 app.get('/api/health', (res) => res.json({ status: 'OK' }));
 
-app.use((err, res) => {
+
+app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(err.status || 500).json({ message: err.message || 'Internal Server Error' });
 });
