@@ -12,9 +12,10 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://web-programming-project-h9fh.vercel.app/'  
+    'https://web-programming-project-h9fh.vercel.app'
   ]
 }));
+
 app.use(express.json());
 
 app.use('/api/food', foodRoutes);
