@@ -8,8 +8,6 @@ backend/.env
 frontend/dist/
 frontend/build/
 
-backend/prisma/migrations/
-
 .DS_Store
 Thumbs.db
 

@@ -1,4 +1,3 @@
-// controllers/dashboard.controller.js
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
@@ -39,7 +38,6 @@ const getSummary = async (req, res, next) => {
     const todayCaloriesIn = todayFood.reduce((sum, f) => sum + f.calories, 0);
     const todayCaloriesBurned = todayWorkout.reduce((sum, w) => sum + (w.caloriesBurned || 0), 0);
 
-    // Weekly calories by day
     const weeklyCalories = buildDailyTotals(foodLogs, workoutLogs, 7);
 
     res.json({
